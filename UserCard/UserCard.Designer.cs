@@ -36,6 +36,7 @@
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.picture = new System.Windows.Forms.PictureBox();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,10 +107,19 @@
             this.picture.TabIndex = 8;
             this.picture.TabStop = false;
             // 
+            // loginTextBox
+            // 
+            this.loginTextBox.Location = new System.Drawing.Point(287, 161);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loginTextBox.TabIndex = 16;
+            this.loginTextBox.Visible = false;
+            // 
             // UserCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.surnameLabel);
@@ -120,6 +130,7 @@
             this.Controls.Add(this.picture);
             this.Name = "UserCard";
             this.Size = new System.Drawing.Size(519, 243);
+            this.Load += new System.EventHandler(this.UserCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,5 +147,6 @@
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.TextBox loginTextBox;
     }
 }

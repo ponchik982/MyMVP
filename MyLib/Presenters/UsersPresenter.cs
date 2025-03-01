@@ -25,8 +25,14 @@ namespace MyLib.Presenters
   
             model_.SuccessLoadedInfoUsers += Model__SuccessLoadedInfoUsers;
             model_.LoadInfoUsers();
+            card_.UserChange += Card__UserChange;
         }
 
+        private void Card__UserChange(User obj)
+        {
+            Model__ChangedUser(obj);
+        }
+       
         public void View__FiltrEvent(string FiltrOrder, string input)
         {
 

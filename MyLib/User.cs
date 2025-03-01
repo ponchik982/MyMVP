@@ -17,6 +17,7 @@ namespace MyLib
 
         public string Avatar;
         public DateTime DateBirth { get; set; }
+        public string login;
 
     }
 }

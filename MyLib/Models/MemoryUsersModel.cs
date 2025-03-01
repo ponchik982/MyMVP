@@ -44,6 +44,21 @@ namespace MyLib.Models
                 SuccessLoadedInfoUsers.Invoke();
             }
         }
+        public void UserChange(User u)
+        {
+            foreach (User current in _users)
+            {
+                if (current.login == u.login)
+                {
+                    current.Name = u.Name;
+                    current.Surname = u.Surname;
+                    current.Email = u.Email;
+                    SuccessLoadedInfoUsers.Invoke();
+                }
+            }
+           
+            
+        }
 
         public List<User> ReturnUsers()
         {
